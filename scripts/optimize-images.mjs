@@ -37,16 +37,13 @@ async function optimizeImage(filePath) {
     let buffer;
 
     if (ext === '.png') {
-      // Check if image has transparency
-      if (metadata.hasAlpha) {
-        // Keep as PNG but optimize
-        buffer = await pipeline.png({ quality: QUALITY, compressionLevel: 9 }).toBuffer();
-      } else {
-        // Convert to JPEG
-        outputPath = filePath.replace(/\.png$/i, '.jpg');
-        buffer = await pipeline.jpeg({ quality: QUALITY, mozjpeg: true }).toBuffer();
-        fs.unlinkSync(filePath); // Remove original PNG
-      }
+      // Convert all PNG to JPEG with white background
+      outputPath = filePath.replace(/\.png$/i, '.jpg');
+      buffer = await pipeline
+        .flatten({ background: { r: 255, g: 255, b: 255 } }) // White background
+        .jpeg({ quality: QUALITY, mozjpeg: true })
+        .toBuffer();
+      fs.unlinkSync(filePath); // Remove original PNG
     } else {
       // Optimize JPEG
       buffer = await pipeline.jpeg({ quality: QUALITY, mozjpeg: true }).toBuffer();
