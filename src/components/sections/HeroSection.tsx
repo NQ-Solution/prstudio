@@ -172,8 +172,8 @@ export default function HeroSection() {
         .hero-image {
           object-fit: cover;
           object-position: left center;
-          left: calc(25% + 15vh) !important;
-          width: calc(75% - 15vh) !important;
+          left: calc(30% + 15vh) !important;
+          width: calc(70% - 15vh) !important;
         }
 
         /* 대각선 오버레이 - 화면 크기에 상관없이 일정한 각도 유지 */

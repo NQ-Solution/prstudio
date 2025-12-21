@@ -38,7 +38,7 @@ const jewelryPricing = [
     name: '커플링',
     nameEn: 'Couple Rings',
     subtitle: '보정완료가격',
-    image: '/images/couple-rings/커플링1-3756-re.png',
+    image: '/images/couple-rings/커플링1-3756-re.jpg',
     regularPrice: '34,000',
     salePrice: '24,000',
     prices: [
@@ -65,7 +65,7 @@ const jewelryPricing = [
     name: '팔찌',
     nameEn: 'Bracelets',
     subtitle: '보정완료가격',
-    image: '/images/bracelets/팔찌(순금 돌).png',
+    image: '/images/bracelets/팔찌(순금 돌).jpg',
     regularPrice: '23~30,000',
     salePrice: '13~20,000',
     prices: [
@@ -100,7 +100,7 @@ export default function JewelryPage() {
         <div className="hero-section">
           <div className="hero-content">
             <Image
-              src="/images/promo-banner.png"
+              src="/images/promo-banner.jpg"
               alt="지금부터 파격가 할인촬영"
               width={600}
               height={400}

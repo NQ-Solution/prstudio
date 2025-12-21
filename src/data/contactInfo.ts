@@ -6,8 +6,8 @@
 export const contactInfo = {
   // 전화
   phone: {
-    display: '02-1234-5678',
-    link: 'tel:02-1234-5678',
+    display: '02-765-1627',
+    link: 'tel:02-765-1627',
     hours: '평일 09:00 - 18:00 (주말/공휴일 휴무)',
   },
 
@@ -20,8 +20,8 @@ export const contactInfo = {
 
   // 이메일
   email: {
-    address: 'info@photoprintland.com',
-    link: 'mailto:info@photoprintland.com',
+    address: 'prnpr@naver.com',
+    link: 'mailto:prnpr@naver.com',
     hours: '24시간 접수 (답변은 영업일 기준 1일 이내)',
   },
 
@@ -37,8 +37,8 @@ export const contactInfo = {
   business: {
     name: '포토인쇄랜드',
     nameEn: 'PHOTO PRINT LAND',
-    registrationNumber: 'test', // 사업자등록번호
-    ceo: '', // 대표자명
+    registrationNumber: '122-01-88943', // 사업자등록번호
+    ceo: '주인호', // 대표자명
     established: '2000', // 설립년도
   },
 
