@@ -204,7 +204,7 @@ export default function ContactPage() {
             <div className="info-card">
               <div className="card-header">
                 <Image
-                  src="/images/logo/PRlogo.jpg"
+                  src="/images/logo/logo.jpg"
                   alt={contactInfo.business.name}
                   width={180}
                   height={300}
