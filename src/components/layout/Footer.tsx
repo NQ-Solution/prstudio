@@ -29,15 +29,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Location */}
-            <div className="footer-group">
-              <h4 className="group-title">위치</h4>
-              <ul className="group-links">
-                <li><span className="footer-text">{contactInfo.address.full}</span></li>
-                <li><span className="footer-text">{contactInfo.address.building}</span></li>
-                <li><span className="footer-text">{contactInfo.subway.station} {contactInfo.subway.lines.join('·')}</span></li>
-              </ul>
-            </div>
           </div>
 
           {/* Business Info */}

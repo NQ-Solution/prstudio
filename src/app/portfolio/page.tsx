@@ -451,7 +451,7 @@ export default function PortfolioPage() {
         .gallery-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 0;
+          gap: 8px;
           margin-bottom: 48px;
         }
 
@@ -832,7 +832,7 @@ export default function PortfolioPage() {
 
           .gallery-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 0;
+            gap: 8px;
           }
 
           .pagination {

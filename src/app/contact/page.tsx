@@ -204,7 +204,7 @@ export default function ContactPage() {
             <div className="info-card">
               <div className="card-header">
                 <Image
-                  src="/images/logo/logo.jpg"
+                  src="/images/logo/logo.png"
                   alt={contactInfo.business.name}
                   width={180}
                   height={300}
@@ -217,20 +217,6 @@ export default function ContactPage() {
               </div>
 
               <div className="card-body">
-                <div className="info-item">
-                  <div className="info-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                    </svg>
-                  </div>
-                  <div className="info-text">
-                    <span className="info-label">Location</span>
-                    <span className="info-value">{contactInfo.address.full}</span>
-                    <span className="info-sub">{contactInfo.address.building} ({contactInfo.address.detail})</span>
-                  </div>
-                </div>
-
                 <div className="info-item">
                   <div className="info-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -257,98 +243,6 @@ export default function ContactPage() {
                     <span className="info-value">고정 가격제</span>
                     <span className="info-sub">투명한 가격 정책</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 찾아오는길 Section */}
-          <div className="location-section">
-            <h2 className="section-title">찾아오는 길</h2>
-            <div className="location-card">
-              <div className="location-address">
-                <div className="address-main">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                  <div>
-                    <strong>{contactInfo.address.full} ({contactInfo.address.building})</strong>
-                    <p>{contactInfo.address.detail}</p>
-                  </div>
-                  <button
-                    className={`copy-btn-small ${copiedText === 'address' ? 'copied' : ''}`}
-                    onClick={() => handleCopy(`${contactInfo.address.full} ${contactInfo.address.building}`, 'address')}
-                  >
-                    {copiedText === 'address' ? (
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M20 6L9 17l-5-5"/>
-                      </svg>
-                    ) : (
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/>
-                      </svg>
-                    )}
-                    <span>{copiedText === 'address' ? '복사됨' : '주소 복사'}</span>
-                  </button>
-                </div>
-                <div className="address-subway">
-                  <div className="subway-badge line-1">{contactInfo.subway.lines[0].charAt(0)}</div>
-                  <div className="subway-badge line-3">{contactInfo.subway.lines[1].charAt(0)}</div>
-                  <div className="subway-badge line-5">{contactInfo.subway.lines[2].charAt(0)}</div>
-                  <span>{contactInfo.subway.station} 하차</span>
-                </div>
-              </div>
-
-              <div className="location-map">
-                <div className="map-visual">
-                  {/* 지도 시각화 */}
-                  <div className="map-container">
-                    <div className="map-road horizontal main-road">
-                      <span className="road-label left">창덕궁</span>
-                      <span className="road-label right">종로5가</span>
-                    </div>
-                    <div className="map-road vertical left-road">
-                      <span className="road-label top">종묘</span>
-                    </div>
-                    <div className="map-road vertical right-road"></div>
-
-                    {/* 종로3가역 - 보라색 (1,3,5호선) */}
-                    <div className="station station-left">
-                      <div className="station-circle purple">종로3가역</div>
-                    </div>
-
-                    {/* 종로3가역 - 주황색 (3호선) */}
-                    <div className="station station-right">
-                      <div className="station-circle orange">종로3가역</div>
-                    </div>
-
-                    {/* 포토인쇄랜드 위치 - 보라색역과 낙원상가 사이 */}
-                    <div className="photoland-marker">
-                      <div className="marker-building">
-                        <span className="building-name">포토인쇄랜드</span>
-                        <span className="building-detail">드래곤팰리스 5층 509호</span>
-                      </div>
-                    </div>
-
-                    {/* 랜드마크 */}
-                    <div className="landmark jewelry-town">
-                      <span>주얼리타운 봉익동</span>
-                    </div>
-                    <div className="landmark nakwon">
-                      <span>낙원상가</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="map-directions">
-                  <h4>오시는 방법</h4>
-                  <ul>
-                    <li><strong>지하철:</strong> {contactInfo.subway.station} {contactInfo.subway.exit}</li>
-                    <li><strong>버스:</strong> {contactInfo.subway.station} 정류장 하차</li>
-                    <li><strong>주차:</strong> 건물 내 주차 가능 (유료)</li>
-                  </ul>
                 </div>
               </div>
             </div>
