@@ -2,22 +2,62 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { heroMainImage } from '@/data/portfolioImages';
+import { useState, useEffect, useCallback } from 'react';
+import { heroSlideImages } from '@/data/portfolioImages';
 
 export default function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const goToSlide = useCallback((index: number) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsTransitioning(false), 800);
+  }, [isTransitioning]);
+
+  const nextSlide = useCallback(() => {
+    goToSlide((currentSlide + 1) % heroSlideImages.length);
+  }, [currentSlide, goToSlide]);
+
+  // Auto-slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
   return (
     <>
       <section className="hero">
-        {/* Diagonal Split with Image */}
+        {/* Diagonal Split with Image Slider */}
         <div className="diagonal-split">
-          <Image
-            src={heroMainImage}
-            alt="포토랜드 촬영"
-            fill
-            className="hero-image"
-            priority
-          />
+          {heroSlideImages.map((src, index) => (
+            <div
+              key={src}
+              className={`slide-image ${index === currentSlide ? 'active' : ''}`}
+            >
+              <Image
+                src={src}
+                alt={`포토랜드 촬영 ${index + 1}`}
+                fill
+                className="hero-image"
+                priority={index === 0}
+              />
+            </div>
+          ))}
           <div className="diagonal-overlay" />
+
+          {/* Slide Indicators */}
+          <div className="slide-indicators">
+            {heroSlideImages.map((_, index) => (
+              <button
+                key={index}
+                className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                onClick={() => goToSlide(index)}
+                aria-label={`슬라이드 ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Main Content */}
@@ -163,9 +203,51 @@ export default function HeroSection() {
           overflow: hidden;
         }
 
-        .diagonal-split > div:first-child {
+        /* Slide Images */
+        .slide-image {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
           height: 100%;
+          opacity: 0;
+          transition: opacity 0.8s ease-in-out;
+        }
+
+        .slide-image.active {
+          opacity: 1;
+        }
+
+        /* Slide Indicators */
+        .slide-indicators {
+          position: absolute;
+          bottom: 40px;
+          right: 48px;
+          display: flex;
+          gap: 10px;
+          z-index: 10;
+          pointer-events: auto;
+        }
+
+        .indicator {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 2px solid rgba(255, 255, 255, 0.6);
+          background: transparent;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          padding: 0;
+        }
+
+        .indicator:hover {
+          border-color: white;
+          background: rgba(255, 255, 255, 0.3);
+        }
+
+        .indicator.active {
+          background: var(--orange);
+          border-color: var(--orange);
         }
 
         /* 히어로 이미지 - 대각선 오버레이 바로 옆부터 오른쪽 끝까지 */
@@ -589,6 +671,17 @@ export default function HeroSection() {
 
           .scroll-indicator {
             display: none;
+          }
+
+          .slide-indicators {
+            bottom: auto;
+            top: 20px;
+            right: 20px;
+          }
+
+          .indicator {
+            width: 10px;
+            height: 10px;
           }
         }
 

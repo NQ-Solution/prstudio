@@ -65,7 +65,7 @@ const jewelryPricing = [
     name: '팔찌',
     nameEn: 'Bracelets',
     subtitle: '보정완료가격',
-    image: '/images/bracelets/팔찌(순금 돌).jpg',
+    image: '/images/jewelry/팔찌(순금 돌).jpg',
     regularPrice: '23~30,000',
     salePrice: '13~20,000',
     prices: [
@@ -79,7 +79,7 @@ const jewelryPricing = [
     name: '금 · 은 바',
     nameEn: 'Gold & Silver Bar',
     subtitle: '상담 문의',
-    image: '/images/jewelry/converted/골드바1 (1).jpg',
+    image: '/images/jewelry/순금10돈 앞뒤면9954-re.jpg',
     regularPrice: '상담 문의',
     salePrice: '상담 문의',
     prices: [

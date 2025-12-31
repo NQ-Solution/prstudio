@@ -108,7 +108,7 @@ export default function ServicesSection() {
               <div className="main-service-visual">
                 <div className="visual-image-wrapper">
                   <Image
-                    src="/images/jewelry/ring-01.jpg"
+                    src="/images/jewelry/반지R3(Qubic).jpg"
                     alt="주얼리 촬영 샘플 - 반지"
                     fill
                     sizes="(max-width: 1024px) 100vw, 500px"

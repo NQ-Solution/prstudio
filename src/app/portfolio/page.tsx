@@ -148,6 +148,9 @@ export default function PortfolioPage() {
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                     style={{ objectFit: 'cover' }}
+                    loading="lazy"
+                    quality={75}
+                    placeholder="empty"
                   />
                 </div>
                 <div className="item-overlay">
@@ -231,12 +234,14 @@ export default function PortfolioPage() {
             </button>
 
             <div className="modal-image">
+              <div className="modal-loading-spinner" />
               <Image
                 src={selectedImage}
                 alt={getImageName(selectedImage)}
                 fill
                 style={{ objectFit: 'contain' }}
                 priority
+                quality={90}
               />
             </div>
 
@@ -491,8 +496,37 @@ export default function PortfolioPage() {
           background: #f8f8f8;
         }
 
+        /* Loading skeleton animation */
+        .image-container::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            transparent 100%
+          );
+          animation: skeleton-loading 1.5s infinite;
+          z-index: 1;
+        }
+
+        @keyframes skeleton-loading {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+
         [data-theme="dark"] .image-container {
           background: #1a1a1a;
+        }
+
+        [data-theme="dark"] .image-container::before {
+          background: linear-gradient(
+            90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            transparent 100%
+          );
         }
 
         .image-container img {
@@ -738,6 +772,24 @@ export default function PortfolioPage() {
           box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
+        .modal-loading-spinner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 40px;
+          height: 40px;
+          border: 3px solid rgba(255, 107, 53, 0.2);
+          border-top-color: var(--orange);
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+          z-index: 1;
+        }
+
+        @keyframes spin {
+          to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
         [data-theme="dark"] .modal-image {
           background: #2a2a2a;
           border: 1px solid rgba(255, 255, 255, 0.1);
@@ -746,6 +798,8 @@ export default function PortfolioPage() {
 
         .modal-image img {
           padding: 16px;
+          position: relative;
+          z-index: 2;
         }
 
         [data-theme="dark"] .modal-image img {
