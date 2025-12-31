@@ -51,16 +51,6 @@ export const ringImages: string[] = [
   '/images/jewelry/반지1-3736-re.jpg',
   '/images/jewelry/반지3-7673-re.jpg',
   '/images/jewelry/반지3-7679-re.jpg',
-  '/images/jewelry/반지(R5671).jpg',
-  '/images/jewelry/반지(묵주)R2-re.jpg',
-  '/images/jewelry/반지(묵주)R3-re.jpg',
-  '/images/jewelry/반지(순금 돌반지)2374.jpg',
-  '/images/jewelry/반지(순금 돌반지)2379.jpg',
-  '/images/jewelry/반지(여군임관)3-2612-re.jpg',
-  '/images/jewelry/반지(임관반지)18.jpg',
-  '/images/jewelry/반지R2(white color).jpg',
-  '/images/jewelry/반지R3(Qubic).jpg',
-  '/images/jewelry/반지R4(Qubic).jpg',
 ];
 
 // ========================================
@@ -91,7 +81,6 @@ export const earringImages: string[] = [
   '/images/jewelry/귀걸이-222.jpg',
   '/images/jewelry/귀걸이-7618-re.jpg',
   '/images/jewelry/귀걸이-8990.jpg',
-  '/images/jewelry/귀걸이(피어싱8432).jpg',
 ];
 
 // ========================================
@@ -107,22 +96,13 @@ export const necklaceImages: string[] = [
   '/images/jewelry/목걸이6209.jpg',
   '/images/jewelry/목걸이7222-풀.jpg',
   '/images/jewelry/목걸이-4908.jpg',
-  '/images/jewelry/목걸이(14k옐로우)1885.jpg',
-  '/images/jewelry/목걸이(귀걸이)7687-풀.jpg',
-  '/images/jewelry/목걸이(순금)6737.jpg',
-  '/images/jewelry/목걸이(순금)6743.jpg',
-  '/images/jewelry/목걸이(흉상12).jpg',
-  '/images/jewelry/목걸이14k pink4-풀.jpg',
 ];
 
 // ========================================
 // 팔찌 이미지 (jewelry 폴더로 통합됨)
 // ========================================
 export const braceletImages: string[] = [
-  '/images/jewelry/팔찌(순금 돌).jpg',
-  '/images/jewelry/팔찌10(순금).jpg',
   '/images/jewelry/팔찌1279.jpg',
-  '/images/jewelry/팔찌14k pink4.jpg',
   '/images/jewelry/팔찌1619.jpg',
   '/images/jewelry/팔찌23-7195.jpg',
   '/images/jewelry/팔찌23-7214.jpg',
@@ -153,7 +133,6 @@ export const coupleRingImages: string[] = [
   '/images/jewelry/커플링8-1183-rew.jpg',
   '/images/jewelry/커플링11-5652-re.jpg',
   '/images/jewelry/커플링12-5638-re.jpg',
-  '/images/jewelry/커플링13(순금).jpg',
   '/images/jewelry/커플링13-1196-rew.jpg',
   '/images/jewelry/커플링15-5687-re.jpg',
   '/images/jewelry/커플링16-5867-re.jpg',
@@ -163,10 +142,7 @@ export const coupleRingImages: string[] = [
 // 골드바 이미지
 // ========================================
 export const goldbarImages: string[] = [
-  '/images/jewelry/순금10돈 앞뒤면9954-re.jpg',
   '/images/jewelry/순금상패1731-re.jpg',
-  '/images/jewelry/순금코인size비교(3EA)-re1.jpg',
-  '/images/jewelry/실버바(1kg) 앞뒤면.jpg',
   '/images/jewelry/실버바1000g-re.jpg',
   '/images/jewelry/실버바100g-re.jpg',
 ];
@@ -182,16 +158,6 @@ export const setImages: string[] = [
 // 시계 이미지
 // ========================================
 export const watchImages: string[] = [
-  '/images/watch/1-1(전자시계).jpg',
-  '/images/watch/1-2(전자시계).jpg',
-  '/images/watch/1-3(전자시계).jpg',
-  '/images/watch/1-4-re(전자시계).jpg',
-  '/images/watch/1-5-re(전자시계).jpg',
-  '/images/watch/6-1(전자시계).jpg',
-  '/images/watch/6-2(전자시계).jpg',
-  '/images/watch/6-3(전자시계).jpg',
-  '/images/watch/6-4-new(전자시계).jpg',
-  '/images/watch/6-5-new(전자시계).jpg',
   '/images/watch/11-3149-re.jpg',
   '/images/watch/12-1.jpg',
   '/images/watch/12-2.jpg',
@@ -199,9 +165,7 @@ export const watchImages: string[] = [
   '/images/watch/12-4.jpg',
   '/images/watch/2-3120-re-last.jpg',
   '/images/watch/2-3239-re.jpg',
-  '/images/watch/2-3411-re -new.jpg',
   '/images/watch/2-3619-re.jpg',
-  '/images/watch/3-3127-re -last.jpg',
   '/images/watch/3-3221-re.jpg',
   '/images/watch/3-3598-re.jpg',
   '/images/watch/4-1153-re.jpg',
@@ -212,9 +176,6 @@ export const watchImages: string[] = [
   '/images/watch/5-3279-re.jpg',
   '/images/watch/5-3563-re.jpg',
   '/images/watch/5-3658-re.jpg',
-  '/images/watch/7-5280-re (ch).jpg',
-  '/images/watch/7-5283-re (ch).jpg',
-  '/images/watch/7-5288-re (ch).jpg',
   '/images/watch/pr_watch_001.jpg',
   '/images/watch/pr_watch_005.jpg',
   '/images/watch/pr_watch_006.jpg',
@@ -232,22 +193,10 @@ export const trophyImages: string[] = [
   '/images/trophy/1-8452-re..jpg',
   '/images/trophy/1-8454-re..jpg',
   '/images/trophy/11-0984-re.jpg',
-  '/images/trophy/18-12-8893-re (ch).jpg',
-  '/images/trophy/18-14-8901-re (ch).jpg',
-  '/images/trophy/18-15-8911-re (ch).jpg',
-  '/images/trophy/18-16-8921-re (ch).jpg',
   '/images/trophy/2-8411-re.jpg',
   '/images/trophy/2-8446-re..jpg',
   '/images/trophy/24-5507-re.jpg',
-  '/images/trophy/25-4691-re (ch).jpg',
-  '/images/trophy/26-4692-re (ch).jpg',
   '/images/trophy/3-4690-re.jpg',
-  '/images/trophy/33-4712-re (ch).jpg',
-  '/images/trophy/35-4719-re (ch).jpg',
-  '/images/trophy/36-4721-re (ch).jpg',
-  '/images/trophy/39-4674-re (ch).jpg',
-  '/images/trophy/4-4620-re (ch).jpg',
-  '/images/trophy/44-4683-re (ch).jpg',
   '/images/trophy/5-4693-re.jpg',
   '/images/trophy/58-5574-re.jpg',
   '/images/trophy/6932-re.jpg',
@@ -273,23 +222,8 @@ export const trophyImages: string[] = [
   '/images/trophy/_Q3P0494-re.jpg',
   '/images/trophy/_Q3P0496-re.jpg',
   '/images/trophy/_Q3P8586-re1.jpg',
-  '/images/trophy/black cristal dai pink-1786-re.jpg',
-  '/images/trophy/black cristal dai pink-1791-re.jpg',
-  '/images/trophy/black cristal dai pink-1800-re.jpg',
-  '/images/trophy/sample 4464-re.jpg',
-  '/images/trophy/sample 825-5041-re..jpg',
-  '/images/trophy/sample 825-5054-re..jpg',
-  '/images/trophy/sample total(bleck n silver)1.jpg',
-  '/images/trophy/sample total(bleck n silver)3.jpg',
   '/images/trophy/sample-3886.jpg',
   '/images/trophy/sample10-re.jpg',
-  '/images/trophy/sample11(blue).jpg',
-  '/images/trophy/sample5-1(silver sangphe).jpg',
-  '/images/trophy/sample5-2(silver sangphe).jpg',
-  '/images/trophy/sample55-1(black).jpg',
-  '/images/trophy/sample55-2(black).jpg',
-  '/images/trophy/sample6-1(gold sangphe).jpg',
-  '/images/trophy/sample6-2(gold sangphe).jpg',
   '/images/trophy/sangphe2-7017-re.jpg',
 ];
 

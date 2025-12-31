@@ -65,7 +65,7 @@ const jewelryPricing = [
     name: '팔찌',
     nameEn: 'Bracelets',
     subtitle: '보정완료가격',
-    image: '/images/jewelry/팔찌(순금 돌).jpg',
+    image: '/images/jewelry/팔찌1279.jpg',
     regularPrice: '23~30,000',
     salePrice: '13~20,000',
     prices: [
@@ -79,7 +79,7 @@ const jewelryPricing = [
     name: '금 · 은 바',
     nameEn: 'Gold & Silver Bar',
     subtitle: '상담 문의',
-    image: '/images/jewelry/순금10돈 앞뒤면9954-re.jpg',
+    image: '/images/jewelry/실버바1000g-re.jpg',
     regularPrice: '상담 문의',
     salePrice: '상담 문의',
     prices: [
@@ -437,7 +437,8 @@ export default function JewelryPage() {
 
         .price-grid {
           display: grid;
-          gap: 0;
+          gap: 16px;
+          padding: 0 16px;
         }
 
         .price-card {
@@ -449,6 +450,8 @@ export default function JewelryPage() {
           transition: all 0.4s ease;
           height: 100%;
           position: relative;
+          border-radius: 8px;
+          border: 1px solid var(--border-color);
         }
 
         .price-card:hover {
@@ -957,7 +960,8 @@ export default function JewelryPage() {
 
           .price-grid {
             grid-template-columns: repeat(2, 1fr);
-            gap: 0;
+            gap: 20px;
+            padding: 0 24px;
           }
 
           .promo-brush-bg {
@@ -972,7 +976,8 @@ export default function JewelryPage() {
         @media (min-width: 1024px) {
           .price-grid {
             grid-template-columns: repeat(3, 1fr);
-            gap: 0;
+            gap: 24px;
+            padding: 0 48px;
           }
 
           .hero-section {
