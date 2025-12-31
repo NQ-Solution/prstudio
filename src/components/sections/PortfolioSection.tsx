@@ -4,11 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const portfolioImages = [
-  '/images/jewelry/converted/반지0345.jpg',
-  '/images/jewelry/converted/귀걸이0067.jpg',
-  '/images/jewelry/converted/목걸이2438.jpg',
-  '/images/jewelry/converted/반지1673.jpg',
-  '/images/jewelry/converted/귀걸이2459.jpg',
+  '/images/jewelry/반지0345.jpg',
+  '/images/jewelry/귀걸이0067.jpg',
+  '/images/jewelry/목걸이2438-풀.jpg',
+  '/images/jewelry/반지1673.jpg',
+  '/images/jewelry/귀걸이2459.jpg',
 ];
 
 const categories = [

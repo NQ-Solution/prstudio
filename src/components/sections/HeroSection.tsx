@@ -254,15 +254,15 @@ export default function HeroSection() {
         .hero-image {
           object-fit: cover;
           object-position: left center;
-          left: calc(30% + 15vh) !important;
-          width: calc(70% - 15vh) !important;
+          left: calc(38% + 5vh) !important;
+          width: calc(62% - 5vh) !important;
         }
 
-        /* 대각선 오버레이 - 화면 크기에 상관없이 일정한 각도 유지 */
+        /* 대각선 오버레이 - 더 가파른 각도 (거의 직각에 가깝게) */
         .diagonal-overlay {
           position: absolute;
           inset: 0;
-          clip-path: polygon(0 0, calc(25% + 15vh) 0, calc(55% + 15vh) 100%, 0 100%);
+          clip-path: polygon(0 0, calc(35% + 5vh) 0, calc(42% + 5vh) 100%, 0 100%);
           background: var(--bg-primary);
           z-index: 1;
         }

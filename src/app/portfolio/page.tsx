@@ -17,6 +17,7 @@ export default function PortfolioPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<CategoryType>('all');
+  const [isChangingCategory, setIsChangingCategory] = useState(false);
   const itemsPerPage = 24;
 
   // 선택된 카테고리에 따라 이미지 필터링
@@ -53,10 +54,17 @@ export default function PortfolioPage() {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentImages = filteredImages.slice(startIndex, startIndex + itemsPerPage);
 
-  // 카테고리 변경 시 첫 페이지로 리셋
+  // 카테고리 변경 시 첫 페이지로 리셋 + 새로고침 효과
   const handleCategoryChange = (category: CategoryType) => {
-    setSelectedCategory(category);
+    if (category === selectedCategory) return;
+    setIsChangingCategory(true);
     setCurrentPage(1);
+
+    // 짧은 딜레이 후 카테고리 변경 (이미지 초기화 효과)
+    setTimeout(() => {
+      setSelectedCategory(category);
+      setIsChangingCategory(false);
+    }, 150);
   };
 
   const openModal = (image: string) => {
@@ -134,10 +142,10 @@ export default function PortfolioPage() {
             <span>문의 시 &quot;반지 023번처럼 촬영해주세요&quot; 라고 번호를 알려주시면 더 빠르게 상담 가능합니다</span>
           </div>
 
-          <div className="gallery-grid">
+          <div className={`gallery-grid ${isChangingCategory ? 'is-loading' : ''}`} key={`gallery-${selectedCategory}-${currentPage}`}>
             {currentImages.map((item, index) => (
               <div
-                key={startIndex + index}
+                key={`${selectedCategory}-${startIndex + index}-${item.src}`}
                 className="gallery-item"
                 onClick={() => openModal(item.src)}
               >
@@ -458,6 +466,12 @@ export default function PortfolioPage() {
           grid-template-columns: repeat(2, 1fr);
           gap: 8px;
           margin-bottom: 48px;
+          opacity: 1;
+          transition: opacity 0.15s ease;
+        }
+
+        .gallery-grid.is-loading {
+          opacity: 0;
         }
 
         @media (min-width: 640px) {
